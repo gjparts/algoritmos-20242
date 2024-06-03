@@ -63,5 +63,33 @@ int main(){
 		cout << arreglo3[i] << endl;
 	}
 	
+	//imprimir las direcciones de memoria de los elementos de un arreglo
+	for( int i = 0; i < end(arreglo3)-begin(arreglo3); i++ ){
+		cout << &arreglo3[i] << endl;
+	}
+	
+	cout << "**************************************" << endl;
+	double arreglo4[] = {4.75675767, 5.654646, 3.1416, 2.2, 5, 9.923};
+	//recuerde que los double miden 8 bytes por lo tanto los saltos entre las direcciones de memoria
+	//de cada elemento seran de 8.
+	//imprimir los valores y direcciones de los elementos del arreglo4 usando end y begin
+	for( int i = 0; i < end(arreglo4)-begin(arreglo4); i++ ){
+		cout << &arreglo4[i] << " = " << arreglo4[i] << endl;
+	}
+	cout << "begin del arreglo4: " << begin(arreglo4) << endl;
+	//si el arreglo es de double, entonces end es la direccion de memoria del
+	//ultimo elemento mas 8 bytes
+	cout << "end del arreglo4: " << end(arreglo4) << endl;
+	
+	cout << "**************************************" << endl;
+	int arreglo5[] = {3,8,7,111,678754,6,-9876};
+	//las variables int miden 4 bytes, los saltos seran de 4 entre la direccion de cada elemento
+	//imprimir los valores y direcciones de los elementos del arreglo5 usando end y begin
+	for( int i = 0; i < end(arreglo5)-begin(arreglo5); i++ ){
+		cout << &arreglo5[i] << " = " << arreglo5[i] << endl;
+	}
+	cout << "begin del arreglo5: " << begin(arreglo5) << endl;
+	cout << "end del arreglo5: " << end(arreglo5) << endl;
+	
 	return 543;
 }
