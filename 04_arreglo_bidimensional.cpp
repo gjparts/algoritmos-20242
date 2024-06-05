@@ -21,6 +21,21 @@ int main(){
 		cout << endl; //pasar a la siguiente linea
 	}
 	
+	//forma 2: prellenado con valores iniciales
+	//es obligatorio definir el tamaño del arreglo secundario
+	int arreglo2[][5] = {
+		{1, 7, 9, 200, 5},
+		{5, 8, 111, -2, 0},
+		{87, 5, 99, 5, -12},
+		{500, 12, 345, 23, 8}
+	};
+	cout << "***********************************************" << endl;
+	for( int i = 0; i < end(arreglo2)-begin(arreglo2); i++ ){
+		for( int j = 0; j < end(arreglo2[i])-begin(arreglo2[i]); j++ ){
+			cout << arreglo2[i][j] << "\t";
+		}
+		cout << endl;
+	}
 	
 	return 543;
 }
