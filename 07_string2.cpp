@@ -32,8 +32,14 @@ int main(){
 	s2: P***e***r***a***
 	
 	*/
-	
-	
+	string s2 = "";
+	cout << "digitar string: ";
+	getline(cin,s1);
+	for( int i = 0; i < s1.length(); i++ ){
+		s2 = s2+s1[i]+"***";
+	}
+	cout << "s1: " << s1 << endl;
+	cout << "s2: " << s2 << endl;
 	
 	
 	return 543;
