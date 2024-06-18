@@ -27,7 +27,23 @@ int main(){
 	luego hacer una rutina que altere cada fruta agregando un
 	ASTERISCO entre cada caracter de cada una de las frutas,
 	por ultimo imprimir dicho arreglo */
+	string frutas[] = {"pera", "manzana", "naranja", "uva",
+						"fresa", "sandia", "mandarina"};
 	
+	//recorrer fruta por fruta
+	for( int i = 0; i < end(frutas)-begin(frutas); i++ ){
+		//extraer la fruta actual en un string
+		string tmp = frutas[i];
+		//vaciar la fruta actual en el arreglo
+		frutas[i] = "";
+		//recorrer la fruta actual caracter por caracter
+		//copiando cada caracter hacia el elemento i del arreglo junto a un asterisco
+		for( int j = 0; j < tmp.length(); j++ ){
+			frutas[i] = frutas[i]+tmp[j]+'*';
+		}
+		//imprimir la nueva fruta
+		cout << frutas[i] << endl;
+	}
 	
 	return 567;
 }
