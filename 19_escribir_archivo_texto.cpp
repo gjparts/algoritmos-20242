@@ -7,7 +7,7 @@ int main(){
 	
 	/*cuando abrimos un archivo para escritura, si el archivo
 	no existe entonces es creado automaticamente.*/
-	archivo.open("libro.txt", ios::out);
+	archivo.open("libro.txt", ios::app);
 	/*las operaciones de escritura posibles son:
 	ios::out	sobreescribe el archivo perdiendo lo que estaba antes (OUTPUT)
 	ios::app	agrega contenido al final del archivo, no se pierde lo que ya estaba (APPEND)
