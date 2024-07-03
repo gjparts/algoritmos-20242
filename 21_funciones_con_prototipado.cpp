@@ -23,10 +23,11 @@ Hacer una funcion que retorne o devuelva el calcula el ISR para una persona natu
 se le enviara como parametro las ganancias del anio./
 el calculo es de acuerdo a la siguiente tasa progresiva:
 Tasa 	Desde 			Hasta
-Exentos L 0.01 			L 209,369.62
-15% 	L 209,369.63 	L 319,251.54
-20% 	L 319,251.55 	L 742,445.49
-25% 	L 742,445.50 en adelante*/
+Exentos L 0.01 			L 209,369.62   aqui hay 209,369.62
+15% 	L 209,369.63 	L 319,251.54   aqui hay 109,881.91
+20% 	L 319,251.55 	L 742,445.49   aqui hay 423,193.94
+25% 	L 742,445.50 en adelante
+la funcion debe utilizar tipo de dato double.*/
 
 
 /*conceptos:
