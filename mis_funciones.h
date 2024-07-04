@@ -1,5 +1,3 @@
-//EJEMPLOS SIN USAR PROTOTIPADO
-//consiste en definir las funciones con su firma y cuerpo antes de main
 #include<iostream>
 using namespace std;
 
@@ -33,18 +31,4 @@ double calculoISRnatural(double ganancias){
 		return 109881.91*0.15+423193.94*0.2+(ganancias-209369.62-109881.91-423193.94)*0.25;
 	
 	return 0.00;
-}
-
-int main(){
-	cout << sumar(5,6) << endl;
-	cout << sumar(4,5,7) << endl;
-	cout << sumar(4.2,3.7) << endl;
-	int x = sumar(2,2);
-	int y = sumar(3,3);
-	cout << x+y << endl;
-	cout << calculoISRnatural(800000) << endl;
-	cout << calculoISRnatural(400000) << endl;
-	cout << calculoISRnatural(300000) << endl;
-	
-	return 777;
 }
