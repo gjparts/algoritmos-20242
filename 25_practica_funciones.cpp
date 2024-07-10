@@ -12,6 +12,14 @@ int main(){
 	cout << elevar(2,4) << endl;
 	cout << elevar(5,3) << endl;
 	cout << elevar(9,700) << endl;
+	cout << hipotenusa(3,4) << endl;
+	cout << esMultiplo(5,2) << endl; //0 es false
+	cout << esMultiplo(6,2) << endl; //1 es true
+	//las funciones void no retornan nada, por lo tanto estas
+	//no se pueden usar en situaciones como cout por ejemplo
+	//cout << imprimirRectangulo(4,8,'*') << endl;
+	imprimirRectangulo(4,8,'*');
+	
 	
 	return 777;
 }
