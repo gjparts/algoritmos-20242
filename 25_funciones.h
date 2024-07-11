@@ -1,5 +1,7 @@
 #include<iostream>
 #include<stdexcept>
+#define _USE_MATH_DEFINES //esto se coloca antes de incluir math.h o cmath
+						  //para poder traer constantes como PI (M_PI)
 #include<cmath>
 using namespace std;
 /*1. Escriba una funcion llamada elevar que reciba dos numeros enteros,
@@ -54,6 +56,46 @@ void imprimirRectangulo(int largo, int ancho, char caracter){
 dicha funcion debera recibir el radio como parametro.
 Usando sobrecarga de funciones haga que la funcion pueda
 trabajar con numeros double o con numeros float.*/
+double areaCirculo(double radio){
+	return M_PI*pow(radio,2);
+}
+float  areaCirculo(float radio){
+	return M_PI*pow(radio,2);
+}
+
+/*6. Escriba una función llamada minimo que retorne
+el menor de tres números, dicha funcion debera poder
+funcionar con tres numeros enteros o con
+tres numeros double o tres numeros float.
+Para evitar hacer lo mismo 3 veces con diferente tipo, se recomienda
+reutilizar la funcion que soporte numeros de mayor precision y mandarla
+a llamar desde las que usan numeros de menor precision*/
+//IMPORTANTE: la funcion a reutilizar debe definirse antes que las que la mandan a llamar
+double minimo(double a, double b, double c){
+	//cout << "usando minimo con double" << endl;
+	//de las 3 funciones sobrecargadas esta es la de mayor precision
+	if( a <= b && a <= c ) return a;
+	if( b <= a && b <= c ) return b;
+	if( c <= a && c <= b ) return c;
+}
+int minimo(int a, int b, int c){
+	//cout << "usando minimo con int" << endl;
+	//pasar los valores int a valores double
+	//para que la funcion minimo ejecutada sea la de doubles
+	double x = a, y = b, z = c;
+	return minimo(x,y,z);
+}
+float minimo(float a, float b, float c){
+	//cout << "usando minimo con float" << endl;
+	//pasar los valores float a valores double
+	//para que la funcion minimo ejecutada sea la de doubles
+	double x = a, y = b, z = c;
+	return minimo(x,y,z);
+}
+
+
+
+
 
 
 

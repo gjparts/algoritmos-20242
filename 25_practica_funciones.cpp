@@ -19,7 +19,12 @@ int main(){
 	//no se pueden usar en situaciones como cout por ejemplo
 	//cout << imprimirRectangulo(4,8,'*') << endl;
 	imprimirRectangulo(4,8,'*');
+	cout << areaCirculo(3.53543f) << endl;
+	cout << areaCirculo(7.543535353) << endl;
 	
+	cout << minimo(14,5,6) << endl;
+	cout << minimo(3.5f,58.0f,1.3f) << endl;
+	cout << minimo(14.54353,5.543534,6.5435345) << endl;
 	
 	return 777;
 }
