@@ -126,8 +126,31 @@ en la que fue encontrado el caracter proporcionado dentro de
 la cadena de texto proporcionada, si el caracter no es
 encontrado entonces devolver -1.
 No tiene permitido utilizar la funcion find del string.*/
-
-
+int buscar(char buscado, string cadena){
+	for( int i = 0; i < cadena.length(); i++ ){
+		if( cadena[i] == buscado )
+			return i; //return automaticamente hace break
+	}
+	//si llego hasta aqui es porque no encontro nada
+	return -1;
+}
+/*10. Escriba una funcion que reciba como parametros un string y un
+arreglo de string, dicha funcion debera buscar el string proporcionado
+dentro arreglo, si la cadena es encontrada entonces la funcion
+retornara un numero entero con la posicion de la primer
+coincidencia en la que se encontró, si no se encuentra
+nada entonces retornar -1.*/
+int buscarDentroDeArreglo(string buscar, string arreglo[], int tamanoArreglo){
+	//cuando se pasa un arreglo como parametro de funcion
+	//no es posible tener acceso a su direccion de memoria
+	//cout << end(arreglo)-begin(arreglo) << endl;
+	//por ello en c++ se pide como tercer parametro el tamaño del arreglo
+	for( int i = 0; i < tamanoArreglo; i++ )
+		if( arreglo[i] == buscar )
+			return i; //si encontro entonces retornamos la posicion
+	//si llego aqui entonces no encontro nada
+	return -1;
+}
 
 
 

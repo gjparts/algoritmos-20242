@@ -40,5 +40,17 @@ int main(){
 	cout << todoMayusculas("PerA ROJA") << endl;
 	cout << todoMayusculas("PERA ROJA") << endl;
 	
+	cout << buscar('H',"UNAH") << endl;
+	cout << buscar('h',"UNAH") << endl;
+	cout << buscar('n',"tamarindo") << endl;
+	
+	cout << "****************************" << endl;
+	string colores[] = {"rojo","verde","azul","amarillo","blanco","negro"};
+	int s = end(colores)-begin(colores);
+	cout << buscarDentroDeArreglo("blanco",colores,s) << endl;
+	cout << buscarDentroDeArreglo("rojo",colores,s) << endl;
+	cout << buscarDentroDeArreglo("negro",colores,s) << endl;
+	cout << buscarDentroDeArreglo("lila",colores,s) << endl;
+	
 	return 777;
 }
