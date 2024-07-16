@@ -3,6 +3,7 @@
 #define _USE_MATH_DEFINES //esto se coloca antes de incluir math.h o cmath
 						  //para poder traer constantes como PI (M_PI)
 #include<cmath>
+#include<algorithm>
 using namespace std;
 /*1. Escriba una funcion llamada elevar que reciba dos numeros enteros,
 	uno para la base y otro para la potencia, la funcion debe retornar un entero
@@ -92,6 +93,39 @@ float minimo(float a, float b, float c){
 	double x = a, y = b, z = c;
 	return minimo(x,y,z);
 }
+/*7. Escriba una funcion que reciba dos numeros enteros
+como parametros, uno sera el minimo y el otro el maximo,
+la funcion debera retornar un numero aleatorio entero que
+se encuentre entre dichos numeros.*/
+int azar(int min, int max){
+	//si min supera a max se puede usar una guard clause
+	if( min > max )
+		throw invalid_argument("min no puede superar a max");
+	
+	return rand()%(max-min+1)+min;
+}
+/*8. Escriba una funcion que devuelva true si una cadena
+de texto esta escrita toda en mayusculas y false si no es así.*/
+bool todoMayusculas(string str){
+	//comparar a str con una copia de str en mayusculas
+	string copia = str;
+	transform(copia.begin(), copia.end(), copia.begin(), ::toupper);
+	/*
+	//tradicional:
+	if( str == copia )
+		return true;
+	else
+		return false;*/
+	//usando operador ternario
+	return ( str == copia ? true : false );
+}
+/*9. Escriba una funcion a la cual se le proporcione como
+parametros un caracter y una cadena de texto, dicha funcion
+debera devolver un entero con la posicion de la primer coincidencia
+en la que fue encontrado el caracter proporcionado dentro de
+la cadena de texto proporcionada, si el caracter no es
+encontrado entonces devolver -1.
+No tiene permitido utilizar la funcion find del string.*/
 
 
 

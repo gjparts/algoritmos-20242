@@ -1,4 +1,5 @@
 #include<iostream>
+#include<ctime>
 #include "25_funciones.h"
 
 using namespace std;
@@ -25,6 +26,19 @@ int main(){
 	cout << minimo(14,5,6) << endl;
 	cout << minimo(3.5f,58.0f,1.3f) << endl;
 	cout << minimo(14.54353,5.543534,6.5435345) << endl;
+	
+	//IMPORTANTE: inicializar el generador de numeros aleatorios
+	//este no puede ir dentro de la funcion azar porque generaria
+	//el mismo numero en cada llamado
+	srand(time(NULL));
+	
+	for( int i = 1; i <= 5; i++ )
+		cout << azar(7,100) << endl;
+		
+	cout << todoMayusculas("pera roja") << endl;
+	cout << todoMayusculas("pEra roja") << endl;
+	cout << todoMayusculas("PerA ROJA") << endl;
+	cout << todoMayusculas("PERA ROJA") << endl;
 	
 	return 777;
 }
