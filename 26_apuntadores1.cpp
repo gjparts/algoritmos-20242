@@ -9,7 +9,7 @@ int main(){
 	int x = 5;
 	sumar(x);
 	cout << x << endl;
-	/*note que x en main no es la misma x en sumar
+	/*note que x en main() no es la misma x en sumar()
 	por lo tanto en main x sigue siendo 5
 	si Usted quisiera alterar a x desde una funcion
 	externa o sea desde un ambito externo necesitara
