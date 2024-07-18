@@ -1,4 +1,5 @@
 #include<iostream>
+#include "28_funciones.h"
 using namespace std;
 
 int main(){
@@ -17,6 +18,13 @@ int main(){
 		cout << "direccion de memoria del elemento " << i << " en numeros: " << &numeros[i] << endl;
 	}
 	cout << "end para el arreglo numeros: " << end(numeros) << endl;
+	
+	int arreglo[6];
+	llenarArregloAzar(arreglo,end(arreglo)-begin(arreglo),5,65);
+	//note que arreglo no lo enviamos con &, porque un arreglo envia una direccion
+	//de memoria sin necesidad de usar &
+	imprimirArreglo(arreglo,end(arreglo)-begin(arreglo));
+	
 	
 	return 111;
 }
