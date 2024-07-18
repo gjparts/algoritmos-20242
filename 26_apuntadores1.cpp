@@ -4,6 +4,14 @@ using namespace std;
 void sumar(int x){
 	x = x + 100;
 }
+//sumarUtilizandoApuntador recibira la direccion de memoria de un entero
+//y lo depositara en una variable llamada x
+void sumarUtilizandoApuntador(int *x){
+	//cuando la variable apuntada es un tipo de dato primitivo
+	//debe llevar el simbolo de apuntador en cada operacion
+	//que se le haga
+	*x = *x + 100;
+}
 
 int main(){
 	int x = 5;
@@ -23,6 +31,10 @@ int main(){
 	cout << "El value de x es " << x << endl;
 	//su direccion de memoria (reference, referencia, offset)
 	cout << "La referencia de x es " << &x << endl;
+	
+	//usemos la funcion que envia a x como apuntador (de x se envia la direccion de memoria)
+	sumarUtilizandoApuntador(&x);
+	cout << "El value de x es " << x << endl;
 	
 	return 777;
 }
