@@ -56,6 +56,18 @@ de numeros double y que le altere todos sus elementos
 elevando cada uno de ellos al cuadrado.
 desde el main: imprimir el arreglo antes y despues
 de aplicarle la funcion*/
+void arregloAlCuadrado(double *arreglo, int tamanoArreglo){
+	for( int i = 0; i < tamanoArreglo; i++ )
+		arreglo[i] = arreglo[i]*arreglo[i];
+}
+
+
+
+
+
+
+
+
 
 
 

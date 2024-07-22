@@ -29,5 +29,8 @@ int main(){
 	arregloMitad(valores,end(valores)-begin(valores));
 	imprimirArreglo(valores,end(valores)-begin(valores));
 	
+	arregloAlCuadrado(valores,end(valores)-begin(valores));
+	imprimirArreglo(valores,end(valores)-begin(valores));
+	
 	return 111;
 }
