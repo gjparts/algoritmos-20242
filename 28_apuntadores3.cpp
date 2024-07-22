@@ -25,6 +25,9 @@ int main(){
 	//de memoria sin necesidad de usar &
 	imprimirArreglo(arreglo,end(arreglo)-begin(arreglo));
 	
+	double valores[] = {5, 6.7, 2.3, 4.4, 1.1, 10};
+	arregloMitad(valores,end(valores)-begin(valores));
+	imprimirArreglo(valores,end(valores)-begin(valores));
 	
 	return 111;
 }

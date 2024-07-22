@@ -36,14 +36,26 @@ void llenarArregloAzar(int *arreglo, int tamanoArreglo, int minimo, int maximo){
 //(no ocupa apuntadores porque no voy a cambiar nada)
 // observe que el parametro para el arreglo lleva los brackets porque
 // no es un arreglo apuntado.
+void imprimirArreglo(double arreglo[], int tamanoArreglo){
+	for( int i = 0; i < tamanoArreglo; i++ )
+		cout << i << "\t" << arreglo[i] << endl;
+}
 void imprimirArreglo(int arreglo[], int tamanoArreglo){
 	for( int i = 0; i < tamanoArreglo; i++ )
 		cout << i << "\t" << arreglo[i] << endl;
 }
 /*hacer una funcion void que reciba un arreglo de numeros double como apuntador
 y que divida todos sus elementos entre 2 alterando al arreglo original*/
+void arregloMitad(double *arreglo, int tamanoArreglo){
+	for( int i = 0; i < tamanoArreglo; i++ )
+		arreglo[i] = arreglo[i]/2;
+}
 
-
+/*Hacer una funcion void que le enviemos un arreglo apuntado
+de numeros double y que le altere todos sus elementos
+elevando cada uno de ellos al cuadrado.
+desde el main: imprimir el arreglo antes y despues
+de aplicarle la funcion*/
 
 
 
