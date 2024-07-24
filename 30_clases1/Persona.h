@@ -15,7 +15,7 @@ class Persona{
 		string nombre;
 		int edad;
 		char genero;
-		long dni;
+		long long dni;
 		//constructores (casi siempre son public y se llaman igual que la clase)
 		//los constructores son funciones sin tipo puesto que devuelven una
 		//direccion de memoria.
@@ -28,6 +28,26 @@ class Persona{
 			this->genero = 'X';
 			this->dni = 0;
 		}
+		//podemos tener mas de un constructor por clase
+		Persona(string nombre, int edad){
+			//este es un constructor con parametros
+			this->nombre = nombre;
+			this->edad = edad;
+			this->genero = 'X';
+			this->dni = 0;
+		}
+		//hagamos otro constructor con mas parametros
+		Persona(string nombre, int edad, char genero, long long dni){
+			//este es un constructor con parametros
+			this->nombre = nombre;
+			this->edad = edad;
+			this->genero = genero;
+			this->dni = dni;
+		}
 }; //no olvidar este punto y coma
 
 #endif
+
+
+
+
