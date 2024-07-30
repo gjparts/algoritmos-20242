@@ -1,6 +1,7 @@
 #include<iostream>
 #include "Persona.h"
 #include "Mascota.h"
+#include "Carro.h"
 using namespace std;
 
 int main(){
@@ -66,6 +67,17 @@ int main(){
 	abc->genero = 'M';
 	cout << "genero de abc: " << abc->generoDescripcion() << endl;
 
+	Carro *honda = new Carro("Honda","Civic","Negro",2004);
+	cout << "Color de honda: " << honda->color << endl;
+	//lo siguiente no se puede hacer poque anio es privado para la clase Carro
+	//cout << "Anio de honda: " << honda->anio << endl;
+	//pero podemos usar el metodo get para consultar el anio:
+	cout << "Anio de honda: " << honda->getAnio() << endl;
+	//si queremos cambiar el valor de anio entonces usamos el metodo set
+	//honda->setAnio(-9999);
+	honda->setAnio(2016);
+	cout << "Anio de honda: " << honda->getAnio() << endl;
+	
 	return 875;
 }
 

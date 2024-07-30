@@ -44,6 +44,14 @@ class Persona{
 			this->genero = genero;
 			this->dni = dni;
 		}
+		//metodos
+		void imprimir(){
+			cout << "***** PERFIL DE PERSONA *****" << endl;
+			cout << "Nombre: " << this->nombre << endl;
+			cout << "EDad: " << this->edad << endl;
+			cout << "Genero: " << this->genero << endl;
+			cout << "DNI: " << this->dni << endl;
+		}
 }; //no olvidar este punto y coma
 
 #endif
