@@ -1,5 +1,6 @@
 #include<iostream>
 #include "Persona.h"
+#include "Mascota.h"
 using namespace std;
 
 int main(){
@@ -43,7 +44,28 @@ int main(){
 	cout << p3->edad << endl;
 	cout << p3->genero << endl;
 	cout << p3->dni << endl;
+	//Persona cuenta con un constructor sin parametros:
+	Persona *alguien = new Persona();
+	//en cambio Mascota no tiene un constructor sin param.
+	//por lo tanto debe de usar alguno de los constr. disponibles
+	Mascota *abc = new Mascota("Mandarino","Gato",4);
+	Mascota *xyz = new Mascota("Rambo","Perro",2,'M',true);
+	//si imprime el objeto lo que obtendra es una direccion de memoria:
+	cout << "direccion de memoria de abc: " << abc << endl;
 	
+	Mascota *qwe = new Mascota("Loreta","Perico",1); // =  NULL
+	cout << "direccion de memoria de qwe: " << qwe << endl;
+	if( qwe == NULL )
+		cout << "qwe no tiene asignada una direccion de memoria." << endl;
+	else
+		cout << qwe->especie << endl;
+
+	abc->imprimir();
+	xyz->imprimir();
+	
+	abc->genero = 'M';
+	cout << "genero de abc: " << abc->generoDescripcion() << endl;
+
 	return 875;
 }
 
