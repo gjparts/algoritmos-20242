@@ -1,7 +1,9 @@
 #include<iostream>
+#include<stdexcept>
 #include "Persona.h"
 #include "Mascota.h"
 #include "Carro.h"
+#include "Empleado.h"
 using namespace std;
 
 int main(){
@@ -78,8 +80,39 @@ int main(){
 	honda->setAnio(2016);
 	cout << "Anio de honda: " << honda->getAnio() << endl;
 	
+	
+	
+	//probar los get y los set
+	Empleado *em1; //declarar
+	try{
+		em1 = new Empleado("Gerardo",42,'M',10000,'T'); //inicializar
+		em1->imprimir();
+		
+		em1->setEdad(15);
+		
+	}catch(exception &ex){
+		cout << ex.what() << endl;
+	}
+	
+	cout << "la edad de em1 es: " << em1->getEdad() << endl;
+	
 	return 875;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
